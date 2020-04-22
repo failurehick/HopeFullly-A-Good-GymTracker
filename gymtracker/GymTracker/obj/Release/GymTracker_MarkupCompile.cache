@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\keat1\OneDrive\Documents\GitHub\HopeFullly-A-Good-GymTracker\gymtracker\GymTracker\obj\Debug\
+C:\Users\keat1\OneDrive\Documents\GitHub\HopeFullly-A-Good-GymTracker\gymtracker\GymTracker\obj\Release\
 GymTracker
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\keat1\OneDrive\Documents\GitHub\HopeFullly-A-Good-GymTracker\gymtracker\GymTracker\App.xaml
 4-1968949097
 
-19-358045982
+18-1535255884
 13-1505183044
 MainWindow.xaml;PageActivity.xaml;PagePerson.xaml;PageSummary.xaml;
 
