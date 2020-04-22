@@ -35,10 +35,12 @@ namespace GymTracker
 
         private float rate;
 
-        public float Rate
+        private int weight;
+
+        public int Weight
         {
-            get { return rate; }
-            set { rate = value; }
+            get { return weight; }
+            set { weight = value; }
         }
 
         
