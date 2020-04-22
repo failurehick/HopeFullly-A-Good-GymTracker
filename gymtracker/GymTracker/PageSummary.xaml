@@ -8,7 +8,102 @@
       d:DesignHeight="800" d:DesignWidth="450"
       Title="Summary">
 
-    <Grid>
-        
+    <Grid Margin="5">
+        <StackPanel Background="Cornsilk">
+            <Grid>
+                <!--Grid Row Definitions-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="11*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <!--Grid Column Definitions-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            
+            <!--Row 0 Title-->
+            <StackPanel>
+                <TextBlock Style="{StaticResource PageHeaderStyle}">
+                    Summary
+                </TextBlock>
+            </StackPanel>
+            
+            <!--Row 1 Summary text block-->
+            <StackPanel Grid.Row="1" Margin="10" Height="auto" Width="auto" Background="LightGray">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                    <!--Row 0 in Row 1 Index-->
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource SummaryDataTextBlock}" FontWeight="Bold">
+                            Activity Data for:
+                        </TextBlock>
+                    </StackPanel>
+                    
+                    <!--Row 1 in Row 1 Index-->
+                    <StackPanel Grid.Row="1">
+                        <TextBlock Style="{StaticResource SummaryDataTextBlock}" x:Name="PersonTextBlock"/>
+                    </StackPanel>
+
+                    <!--Row 2 in Row 1 Index-->
+                    <StackPanel Grid.Row="2">
+                        <TextBlock Style="{StaticResource SummaryDataTextBlock}" x:Name="NumberActivitesTextBlock"/>
+                    </StackPanel>
+
+                    <!--Row 3 in Row 1 Index-->
+                    <StackPanel Grid.Row="3">
+                        <TextBlock Style="{StaticResource SummaryDataTextBlock}" Margin="10 10 10 50" x:Name="MinutesExerciseTextBlock"/>
+                    </StackPanel>
+                    
+                    <!--Row 4 in Row 1 Total used Title-->
+                    <StackPanel Grid.Row="4">
+                        <TextBlock Style="{StaticResource PageHeaderStyle}">
+                            Total Used:
+                        </TextBlock>
+                    </StackPanel>
+                    
+                    <!--Row 5 in Row 1 Total used number-->
+                    <StackPanel Grid.Row="5">
+                        <TextBlock Style="{StaticResource PageHeaderStyle}" FontSize="60" Foreground="Red" x:Name="TotalUsedTextBlock"/>
+                    </StackPanel>
+                </Grid>
+              
+                <TextBlock VerticalAlignment="Center" Padding="10" FontSize="16" x:Name="SummaryTextBlock"/>
+            </StackPanel>
+            
+            <!--Row 2 Buttons-->
+            <StackPanel Grid.Row="2" Height="auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel>
+                        <Button Style="{StaticResource FormButton}" x:Name="SummaryPageBackButton">
+                            Back
+                        </Button>
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <Button Style="{StaticResource FormButton}" x:Name="SummaryPageExitButton">
+                            Exit
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+            
+            
+        </StackPanel>
     </Grid>
 </Page>

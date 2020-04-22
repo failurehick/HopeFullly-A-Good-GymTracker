@@ -63,12 +63,12 @@
                 </StackPanel>
              <!-- RowIndex 4 Colspan 2 Buttons-->
                 <StackPanel Grid.Row="4" Margin="0 30">
-                    <Button Style="{StaticResource FormButton}" x:Name="PagePersonClearButton">
+                    <Button Style="{StaticResource FormButton}" x:Name="PagePersonClearButton" Click="PagePersonClearButton_Click">
                         Clear
                     </Button>
                 </StackPanel>
                 <StackPanel Grid.Row="4" Grid.Column="1" Margin="0 30">
-                    <Button Style="{StaticResource FormButton}" x:Name="ActivitiesButton">
+                    <Button Style="{StaticResource FormButton}" x:Name="ActivitiesButton" Click="ActivitiesButton_Click">
                         Activities
                     </Button>
                 </StackPanel>

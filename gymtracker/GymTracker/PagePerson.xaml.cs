@@ -20,9 +20,36 @@ namespace GymTracker
     /// </summary>
     public partial class PagePerson : Page
     {
+        internal bool formDataVaild = false;
+
         public PagePerson()
         {
             InitializeComponent();
+
+            ClearControls();
+        }
+
+        /// <summary>
+        /// Events rasied on click
+        /// </summary>
+
+        private void PagePersonClearButton_Click(object sender, RoutedEventArgs e)
+        {
+            ClearControls();
+        }
+
+        private void ActivitiesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        private void ClearControls()
+        {
+            PersonNameTextBox.Text = string.Empty;
+            PersonAgeTextBox.Text = string.Empty;
+            PersonWeightTextBox.Text = string.Empty;
+            PersonNameTextBox.Focus();
         }
     }
 }
