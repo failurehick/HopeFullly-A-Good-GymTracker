@@ -1,0 +1,19 @@
+Machine,Level,Rate
+Airdyne Bike,Morning,320
+Airdyne Bike,Afternoon,536
+Airdyne Bike,Evening,761
+Treadmill,Morning,580
+Treadmill,Afternoon,779
+Treadmill,Evening,943
+Elliptical Trainer,Morning,528
+Elliptical Trainer,Afternoon,631
+Elliptical Trainer,Evening,727
+Rowing Machine,Morning,528
+Rowing Machine,Afternoon,640
+Rowing Machine,Evening,787
+Stair Stepper,Morning,528
+Stair Stepper,Afternoon,666
+Stair Stepper,Evening,796
+Weights,Morning,173
+Weights,Afternoon,301
+Weights,Evening,433

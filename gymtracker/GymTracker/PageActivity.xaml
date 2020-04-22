@@ -1,0 +1,102 @@
+﻿<Page x:Class="GymTracker.PageActivity"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GymTracker"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="450"
+      Title="Activity">
+
+    <Grid Margin="5">
+        <StackPanel Background="Cornsilk">
+            <Grid>
+                <!--Grid Rows Definitions-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                
+                <!--Grid Column Definitions-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!--Row 0 Title-->
+                <StackPanel Grid.ColumnSpan="3">
+                    <TextBlock Style="{StaticResource PageHeaderStyle}" Margin="0 5">
+                        Enter Activities
+                    </TextBlock>
+                </StackPanel>
+        
+                <!--Row 1 Machine Selection-->
+                <StackPanel Grid.Row="1">
+                    <TextBlock Style="{StaticResource SingleColumnLabelStyle}">
+                        Machine
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+                    <ComboBox Style="{StaticResource ComboBox}" x:Name="MachinesCombo"/>
+                </StackPanel>
+                
+                <!-- Row 2 Weighted check box -->
+                <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+                    <TextBlock Style="{StaticResource SingleColumnLabelStyle}" x:Name="InclinedCheckBoxLabel">
+                        Weighted
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <CheckBox VerticalAlignment="Center" FontSize="36" x:Name="InclinedCheckBox"/>
+                </StackPanel>
+
+                <!--Row 3 Level Selection-->
+                <StackPanel Grid.Row="3">
+                    <TextBlock Style="{StaticResource SingleColumnLabelStyle}">
+                        Level
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+                    <ComboBox Style="{StaticResource ComboBox}" x:Name="LevelsCombo"/>
+                </StackPanel>
+
+                <!--Row 4 Duration -->
+                <StackPanel Grid.Row="4" Grid.ColumnSpan="2">
+                    <TextBlock Style="{StaticResource SingleColumnLabelStyle}">
+                        Duration in minutes
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="4" Grid.Column="2">
+                    <TextBox Style="{StaticResource NumbersTextBox}" x:Name="DurationTextBox"/>
+                </StackPanel>
+                
+                <!--Row 5 Addition of Activitys-->
+                <StackPanel Grid.Row="5" Grid.ColumnSpan="3">
+                    <Button Style="{StaticResource FormButton}" Margin="0 10" x:Name="AddActivityButton">
+                        Add Activity
+                    </Button>
+                </StackPanel>
+                
+                <!--Row 6 Displayment of number of Activitys-->
+                <StackPanel Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">
+                    <TextBlock Margin="0 10" Style="{StaticResource SingleColumnLabelStyle}">
+                        Count of Activites
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Grid.Row="6" Grid.Column="3" HorizontalAlignment="Center">
+                    <TextBlock Margin="0 10" Style="{StaticResource SingleColumnLabelStyle}" Foreground="red" x:Name="CountOfActivitesTextBlock">
+                        0
+                    </TextBlock>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
