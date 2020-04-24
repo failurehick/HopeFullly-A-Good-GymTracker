@@ -50,7 +50,7 @@
 
                 <!-- Row 2 Weighted check box -->
                 <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
-                    <TextBlock Style="{StaticResource SingleColumnLabelStyle}" x:Name="InclinedCheckBoxLabel">
+                    <TextBlock Style="{StaticResource SingleColumnLabelStyle}" x:Name="InclinedCheckBoxLabel" Margin="13,10,7,10">
                         Weighted
                     </TextBlock>
                 </StackPanel>

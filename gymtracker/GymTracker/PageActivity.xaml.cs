@@ -24,5 +24,19 @@ namespace GymTracker
         {
             InitializeComponent();
         }
+
+        public PageActivity(Person personPassed)
+        {
+            InitializeComponent();
+            //assign passed data to the module
+            person = personPassed;
+
+            //assign person to summary object
+            summary.SessionPerson = person;
+
+            //hide the inclined contorls 
+            InclinedCheckBoxLabel.Visibility = Visibility.Hidden;
+            InclinedCheckBox.Visibility = Visibility.Hidden;
+        }
     }
 }

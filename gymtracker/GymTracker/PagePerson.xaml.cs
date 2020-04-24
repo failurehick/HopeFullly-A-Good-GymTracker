@@ -40,7 +40,16 @@ namespace GymTracker
 
         private void ActivitiesButton_Click(object sender, RoutedEventArgs e)
         {
+            //Get the forms data using the harvest data method
+            //Generate a person with the data collected to pass on
+            //to pageActiviyu
 
+            var personData = HarvestData();
+            if (formDataVaild)
+            {
+                var pageActivity = new PageActivity(personData);
+                this.NavigationService.Navigate(pageActivity);
+            }
         }
 
 
@@ -56,7 +65,7 @@ namespace GymTracker
         {
             //Data Handler Variables
             var tempPerson = new Person();
-            var contOfValidFields = 0;
+            var countOfValidFields = 0;
             //Set The Rules In One Place
             var requiredValidFields = 3;
             //Use Try Catch
@@ -66,7 +75,7 @@ namespace GymTracker
                 if (!string.IsNullOrEmpty(PersonNameTextBox.Text))
                 {
                     tempPerson.PersonName = PersonNameTextBox.Text;
-                    contOfValidFields += 1;
+                    countOfValidFields += 1;
                 }
                 else
                 {
@@ -76,7 +85,7 @@ namespace GymTracker
                 if (!string.IsNullOrEmpty(PersonAgeTextBox.Text))
                 {
                     tempPerson.Age = Convert.ToInt32(PersonAgeTextBox.Text);
-                    contOfValidFields += 1;
+                    countOfValidFields += 1;
                 }
                 else
                 {
@@ -85,12 +94,12 @@ namespace GymTracker
                 //Validate the Weight and assign if there
                 if (!string.IsNullOrEmpty(PersonWeightTextBox.Text))
                 {
-                    tempPerson.Weight = float.Parse(PersonWeightTextBox.Text);
-                    contOfValidFields += 1;
+                    tempPerson.Weight = float.Parse (PersonWeightTextBox.Text);
+                    countOfValidFields += 1;
                 }
                 else
                 {
-                    MessageBox.Show("You must enter a Age");
+                    MessageBox.Show("You must enter a Weight");
                 }
 
                 //WARNING. 6:56 ON VID 17
@@ -101,6 +110,20 @@ namespace GymTracker
 
                 throw;
             }
+
+            if (countOfValidFields == requiredValidFields)
+            {
+                formDataVaild = true;
+                return tempPerson;
+            }
+            else
+            {
+                MessageBox.Show("Form data is not valid");
+                PersonNameTextBox.Focus();
+            }
+
+            return tempPerson;
+
         }
 
     }
