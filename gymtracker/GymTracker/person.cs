@@ -33,11 +33,11 @@ namespace GymTracker
             set { age = value; }
         }
 
-        private float rate;
 
-        private int weight;
 
-        public int Weight
+        private float weight;
+
+        public float Weight
         {
             get { return weight; }
             set { weight = value; }

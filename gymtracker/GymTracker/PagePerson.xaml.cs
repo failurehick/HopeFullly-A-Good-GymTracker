@@ -94,7 +94,7 @@ namespace GymTracker
                 //Validate the Weight and assign if there
                 if (!string.IsNullOrEmpty(PersonWeightTextBox.Text))
                 {
-                    tempPerson.Weight = float.Parse (PersonWeightTextBox.Text);
+                    tempPerson.Weight = float.Parse(PersonWeightTextBox.Text);
                     countOfValidFields += 1;
                 }
                 else
@@ -102,7 +102,7 @@ namespace GymTracker
                     MessageBox.Show("You must enter a Weight");
                 }
 
-                //WARNING. 6:56 ON VID 17
+                
 
             }
             catch (Exception)
