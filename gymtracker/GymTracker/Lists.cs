@@ -13,7 +13,7 @@ namespace GymTracker
 {
     public class Lists
     {
-        internal static string dataPath = @"C:\Users\keat1\OneDrive\Documents\GitHub\TrackingGymApp\gymtracker.txt";
+        internal static string dataPath = @"C:\gymdata.txt";
 
         //<summary>Get list of machines from the text file database </summary>
         //<returns>List<string></returns>

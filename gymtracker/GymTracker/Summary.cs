@@ -23,6 +23,14 @@ namespace GymTracker
             set { person = value; }
         }
 
+        private int numberOfActivities;
+
+        public int NumberOfActivities
+        {
+            get { return numberOfActivities; }
+            set { numberOfActivities = value; }
+        }
+
         private int minutesOfExercise;
 
         public int MinutesOfExercise

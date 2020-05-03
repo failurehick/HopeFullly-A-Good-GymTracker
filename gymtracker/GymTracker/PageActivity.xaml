@@ -45,7 +45,7 @@
                     </TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
-                    <ComboBox Style="{StaticResource ComboBox}" x:Name="MachinesCombo"/>
+                    <ComboBox Style="{StaticResource ComboBox}" x:Name="MachinesCombo" Loaded="MachinesCombo_Loaded" SelectionChanged="MachinesCombo_SelectionChanged"/>
                 </StackPanel>
 
                 <!-- Row 2 Weighted check box -->
@@ -65,7 +65,7 @@
                     </TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
-                    <ComboBox Style="{StaticResource ComboBox}" x:Name="LevelsCombo"/>
+                    <ComboBox Style="{StaticResource ComboBox}" x:Name="LevelsCombo" Loaded="LevelsCombo_Loaded" SelectionChanged="LevelsCombo_SelectionChanged"/>
                 </StackPanel>
 
                 <!--Row 4 Duration -->
@@ -80,7 +80,7 @@
 
                 <!--Row 5 Addition of Activitys-->
                 <StackPanel Grid.Row="5" Grid.ColumnSpan="3">
-                    <Button Style="{StaticResource FormButton}" Margin="0 10" x:Name="AddActivityButton">
+                    <Button Style="{StaticResource FormButton}" Margin="0 10" x:Name="AddActivityButton" Click="AddActivityButton_Click">
                         Add Activity
                     </Button>
                 </StackPanel>
@@ -97,6 +97,11 @@
                     </TextBlock>
                 </StackPanel>
 
+                <!--Row 7 List of activities -->
+                <StackPanel Grid.Row="7" Grid.ColumnSpan="3">
+                    <TextBlock FontSize="24" x:Name="ActivityListTextBlock" Margin="10 5"/>
+                </StackPanel>
+
                 <!--Row 8 Buttons-->
                 <StackPanel Grid.Row="8" Grid.ColumnSpan="3">
                     <Grid Margin="0 10">
@@ -105,12 +110,12 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                      <StackPanel>
-                        <Button Style="{StaticResource FormButton}" x:Name="BackButton">
+                        <Button Style="{StaticResource FormButton}" x:Name="BackButton" Click="BackButton_Click">
                             Back
                          </Button>
                      </StackPanel>
                      <StackPanel Grid.Column="1">
-                         <Button Style="{StaticResource FormButton}" x:Name="PageSummaryButton">
+                         <Button Style="{StaticResource FormButton}" x:Name="PageSummaryButton" Click="PageSummaryButton_Click">
                              Summary
                          </Button>
                      </StackPanel>

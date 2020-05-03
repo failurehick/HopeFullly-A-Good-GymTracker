@@ -90,13 +90,13 @@
                     </Grid.ColumnDefinitions>
 
                     <StackPanel>
-                        <Button Style="{StaticResource FormButton}" x:Name="SummaryPageBackButton">
+                        <Button Style="{StaticResource FormButton}" x:Name="SummaryPageBackButton" Click="SummaryPageBackButton_Click">
                             Back
                         </Button>
                     </StackPanel>
 
                     <StackPanel Grid.Column="1">
-                        <Button Style="{StaticResource FormButton}" x:Name="SummaryPageExitButton">
+                        <Button Style="{StaticResource FormButton}" x:Name="SummaryPageExitButton" Click="SummaryPageExitButton_Click">
                             Exit
                         </Button>
                     </StackPanel>

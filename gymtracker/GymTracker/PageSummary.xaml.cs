@@ -20,9 +20,39 @@ namespace GymTracker
     /// </summary>
     public partial class PageSummary : Page
     {
-        public PageSummary()
+        Summary summary = new Summary();
+
+        public PageSummary(Summary summaryPassed)
         {
             InitializeComponent();
+
+            summary = summaryPassed;
+
+            string person = summary.SessionPerson.PersonName;
+            string numberOfActivities = summary.NumberOfActivities.ToString();
+            string minutesOfExercise = summary.MinutesOfExercise.ToString();
+            string totalUsed = summary.TotalUsed.ToString();
+
+            //fill in the infromation contorls.
+            PersonTextBlock.Text = person;
+
+            NumberActivitesTextBlock.Text = "Number Of Activities: " + numberOfActivities;
+
+            MinutesExerciseTextBlock.Text = "Minutes of Exercise: " + minutesOfExercise;
+
+            TotalUsedTextBlock.Text = totalUsed;
+
+        }
+
+        private void SummaryPageBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            var pageActivity = new PageActivity();
+            this.NavigationService.Navigate(pageActivity);
+        }
+
+        private void SummaryPageExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
